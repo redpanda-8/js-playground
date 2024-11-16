@@ -42,20 +42,21 @@ if (saskaita > 0) {
 
 console.log("-------------------------------------");
 
-// 13 skaidre - 1 --------------------------------------------------------------------------------------------------------
+// JS-2 - 13 skaidre
+// 1 -------------------------------------------------------------------------------------------------------------------
 // palyginu ar pazymiuVidurkis ir lankomumas atitinka kriterijus stipendijai
 const pazymiuVidurkis = 8;
 const lankomumas = 'geras';
 
 if (pazymiuVidurkis >= 8 && lankomumas === 'geras') {
-    console.log(`Jusu vidurkis ${pazymiuVidurkis} ir lankomumas ${lankomumas}, stipendija gausite`)
+    console.log(`Jusu vidurkis ${pazymiuVidurkis} ir lankomumas ${lankomumas}, stipendija gausite`);
 } else {
     console.log('bye');
 };
 
 console.log("-------------------------------------");
 
-// 13 skaidre - 2 --------------------------------------------------------------------------------------------------------
+// 2 -------------------------------------------------------------------------------------------------------------------
 // rasti kuris is 3 skaiciu yra didziausias
 const x = 2;
 const y = 4;
@@ -74,3 +75,132 @@ if (x > z && x > y) {
 }
 
 console.log("-------------------------------------");
+
+// 3 -------------------------------------------------------------------------------------------------------------------
+// patikrinom algyginima ir ar vedes statusus ir nustatem ar duos duota paskola
+let vardas = 'Liutas';
+let atlyginimu = 2000;
+let vedes = true;
+
+
+
+// tikriname ar nera vedes (! padaro false === true) 
+if (!vedes && atlyginimu > 950) {
+    console.log(`Sveikiname ${vardas}, jus gavote paskola`);
+} else if (vedes && atlyginimu > 1500) {
+    console.log(`Gerbemasis ${vardas} paskola jums bus suteikta`);
+} else {
+    console.log(`${vardas}!! Kai uzdirbsi daugiau, ateik, pakalbesim`);
+}
+
+console.log("-------------------------------------");
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< EXAMPLE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Paaiskinimas ! operatoriui
+
+// sitame if statement'e turim tuscia true dali nes reikalingas else outcome'as ir musu salyga ivyksta tada
+// kai kintamasis arVedes = false
+
+// let arVedes = false;
+
+// if(arVedes){
+    
+// } else {
+    // console.log(`${vardas} kadangi esi vingungis gausi dovanukuponas dildosui tik si menesi!`);
+// }
+
+
+// kad sutaupyti ciklu ir efektyviau rasyti koda, galime naudoti ! operator kuris padarys
+// kad gauta false reiksme bus suprantama kaip true ir tada mums nereikes else statement'o
+
+// let arVedes = false;
+
+// if(!arVedes){
+    // console.log(`${vardas} kadangi esi vingungis gausi dovanukuponas dildosui tik si menesi!`);  
+// }
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< EXAMPLE END >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// JS-2 - 17 skaidre
+// 1 -------------------------------------------------------------------------------------------------------------------
+// pagal pateikta number kintamaji priskyreme jam string reiksme kuri savaites diena tai yra,
+// jeigu skaicius didesnis - tos dienos nera (skaiciu verciam i teksta)
+
+let diena = 2;
+
+switch (diena) {
+    case 1:
+        console.log("pirmadienis");
+        break;
+    case 2:
+        console.log("antradienis");
+        break;
+    case 3:
+        console.log("treciadienis");
+        break;
+    case 4:
+        console.log("ketvirtadienis");
+        break;
+    case 5:
+        console.log("penktadienis");
+        break;
+    case 6:
+        console.log("sestadienis");
+        break;
+    case 7:
+        console.log("sekmadienis");
+        break;
+    default:
+        console.log("Neteisingai nurodytas skaicius");
+}
+
+console.log("-------------------------------------");
+
+// 2 -------------------------------------------------------------------------------------------------------------------
+// Deklaruoti kintamaji ir priskirti jam menesio pavadinimo reiksme. Patikrinti kuri skaiciu atitinka menesio pavadinimas,
+// atsakyma atspausdinti konsoleje. Jei irasytas ne menesio pavadinimas, atspausdinti "Irasytas ne menesio pavadinmas".
+
+// pagal pateikta string kintamaji priskyreme jam number reiksme kuris menesis tai yra,
+// jeigu menesio vardas netinkamas - to menesio skaiciaus nera (teksta 'vasaris' verciam i skaiciu 2)
+let menesis = 'vasaris';
+
+switch (menesis) {
+    case 'sausis':
+        console.log(1);
+        break;
+    case 'vasaris':
+        console.log(2);
+        break;
+    case 'kovas':
+        console.log(3);
+        break;
+    case 'balandis':
+        console.log(4);
+        break;
+    case 'geguze':
+        console.log(5);
+        break;
+    case 'birzelis':
+        console.log(6);
+        break;
+    case 'liepa':
+        console.log(7);
+        break;
+    case 'rugpjutis':
+        console.log(8);
+        break;
+    case 'rugsejis':
+        console.log(9);
+        break;
+    case 'spalis':
+        console.log(10);
+        break;
+    case 'lapkritis':
+        console.log(11);
+        break;
+    case 'gruodis':
+        console.log(12);
+        break;
+    default:
+        console.log("Irasytas ne menesio pavadinimas");
+}
